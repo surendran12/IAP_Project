@@ -109,7 +109,7 @@ function App() {
         })}
       </div>
       <div className="controls">
-        <div>
+        <div className="controlsview">
           <select name="x" id="x" onChange={(e) => setPlacement({ ...placement, x: parseInt(e.target.value) })}>
             <option disabled selected value={-1}>
               x
@@ -140,7 +140,7 @@ function App() {
             <option value="SOUTH">SOUTH</option>
           </select>
           <div>
-            <button
+            <button className="placebtn"
               onClick={(e) => {
                 setDirection(placement?.arrow ?? null);
                 setBoardData(placement.x, placement.y);
